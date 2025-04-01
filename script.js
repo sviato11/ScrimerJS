@@ -12,11 +12,9 @@ function startScreamer() {
         }, 50);
         setTimeout(() => clearInterval(flashInterval), 800);
 
-        // Включение скримера (ОСТАЛАСЬ ТОЛЬКО КАРТИНКА)
         const screamer = document.getElementById('screamer');
         screamer.style.display = 'flex';
 
-        // Создание звука через Web Audio API
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         const oscillator = audioCtx.createOscillator();
         const gainNode = audioCtx.createGain();
